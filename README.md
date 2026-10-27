@@ -4,7 +4,7 @@
 
 《孙子兵法》十三篇数字阅读网站与 AI Skill。以沉稳的兵家思想，帮助理解**审慎决策、风险与代价、组织协作、信息与变化**；不把古代战争经验转换成现代危险行为指南。
 
-**[在线阅读（Pages 部署地址）](https://1998x-stack.github.io/theArtOfWar/)** · **[Skill 规范](./SKILL.md)** · **[完整文档](./docs/README.md)** · **[构建状态](./actions)**
+**[预定网站地址（Pages 尚需启用）](https://1998x-stack.github.io/theArtOfWar/)** · **[Skill 规范](./SKILL.md)** · **[完整文档](./docs/README.md)** · **[构建状态](https://github.com/1998x-stack/theArtOfWar/actions)**
 
 ## 主要能力
 
@@ -38,7 +38,7 @@
 
 ### B. 启用 Codex / OpenCode 项目级 Skill（推荐）
 
-Skill 标准入口位于 [\`.agents/skills/sunzi-strategic-wisdom/SKILL.md\`](./.agents/skills/sunzi-strategic-wisdom/SKILL.md)，两个客户端均支持自动发现：
+Skill 标准入口位于 [`.agents/skills/sunzi-strategic-wisdom/SKILL.md`](./.agents/skills/sunzi-strategic-wisdom/SKILL.md)，两个客户端均支持自动发现：
 
 ~~~bash
 git clone https://github.com/1998x-stack/theArtOfWar.git
@@ -49,13 +49,6 @@ opencode
 ~~~
 
 **Codex 明确调用：**
-
-~~~text
-$ sunzi-strategic-wisdom
-请结合《孙子兵法》分析一个重要项目的上线风险，引用原文并给非暴力的现实决策建议。
-~~~
-
-提示：Codex 的实际显式引用格式为 **\`$sunzi-strategic-wisdom\`**（美元符号与名称之间**没有空格**）；在输入时可直接粘贴：
 
 ~~~text
 $sunzi-strategic-wisdom 请从《孙子兵法》的慎战思想出发，分析我该不该贸然推进这个项目。
@@ -76,7 +69,7 @@ ln -s "$HOME/sunzi-reading-skill/.agents/skills/sunzi-strategic-wisdom" \
   "$HOME/.agents/skills/sunzi-strategic-wisdom"
 ~~~
 
-若目标已存在，请勿覆盖。Codex 与 OpenCode 均支持 \`~/.agents/skills/\`。若客户端未及时发现，可重新启动。
+若目标已存在，请勿覆盖。Codex 与 OpenCode 均支持 `~/.agents/skills/`。若客户端未及时发现，可重新启动。
 
 [Codex Skills 官方文档](https://learn.chatgpt.com/docs/build-skills) · [OpenCode Skills 官方文档](https://docs.opencode.ai/docs/skills/)
 
@@ -91,15 +84,15 @@ npm run serve
 # 打开 http://localhost:4173
 ~~~
 
-要求 Node.js 20+；本地服务使用 Python 3。浏览器原生模块需 HTTP 环境，不能直接以 \`file://\` 打开。
+要求 Node.js 20+；本地服务使用 Python 3。浏览器原生模块需 HTTP 环境，不能直接以 `file://` 打开。
 
 | 路径 | 内容 |
 | --- | --- |
-| \`data/chapters.js\` | 十三篇全文、编辑性段落、篇目说明 |
-| \`data/passages.js\`、\`data/translations/\` | 431句及独立史义释读、稳定句 ID |
-| \`index.html\`、\`styles.css\`、\`app.js\` | 网页、视觉设计、交互 |
-| \`SKILL.md\`、\`.agents/skills/\`、\`references/\` | AI Skill、客户端发现与专项参考 |
-| \`docs/\`、\`scripts/\`、\`.github/workflows/\` | 专业文档、数据验证、自动发布 |
+| `data/chapters.js` | 十三篇全文、编辑性段落、篇目说明 |
+| `data/passages.js`、`data/translations/` | 431句及独立史义释读、稳定句 ID |
+| `index.html`、`styles.css`、`app.js` | 网页、视觉设计、交互 |
+| `SKILL.md`、`.agents/skills/`、`references/` | AI Skill、客户端发现与专项参考 |
+| `docs/`、`scripts/`、`.github/workflows/` | 专业文档、数据验证、自动发布 |
 
 ## 文本伦理与许可
 
