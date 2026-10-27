@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101a1b">
+<meta name="description" content="孙子兵法十三篇 · 全文原典与431句逐句史义释读。深墨山水与青铜古简的沉浸式静心阅读；逐句点击揭晓译意。">
+<meta property="og:title" content="孙子兵法 · 以慎为始"><meta property="og:description" content="十三篇 · 四百三十一句。先读原典，再见史义。">
+<meta property="og:image" content="./assets/og-cover.svg">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./styles.css">
+<title>孙子兵法 · The Art of War · 以慎为始</title>
+</head>
+<body>
+<a class="skip" href="#reader">跳转至正文</a><div class="reading-progress" id="progress" aria-hidden="true"></div>
+<header class="header" id="top">
+<a href="#top" class="brand"><span class="seal">兵</span><span>孙子兵法<small>THE ART OF WAR</small></span></a>
+<nav class="header-nav" aria-label="主导航"><a href="#principles">观其道</a><a href="#catalogue">十三篇</a><a href="#reader">开始阅读</a></nav>
+<div class="header-right"><button id="theme-switch" type="button" class="theme-switch" aria-label="切换宣纸配色">◐</button><a href="https://github.com/1998x-stack/theArtOfWar" target="_blank" rel="noopener noreferrer" class="github">SOURCE ↗</a></div>
+</header>
+<main>
+<section class="hero" aria-labelledby="hero-heading">
+<div class="hero-glow" aria-hidden="true"></div><div class="hero-grid" aria-hidden="true"></div>
+<div class="hero-visual" aria-hidden="true">
+<div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+<div class="sun"></div><div class="mountain mountain-far"></div><div class="mountain mountain-near"></div>
+<div class="water-ink"></div><div class="visual-script">静以观势 · 慎而后行</div>
+</div>
+<div class="hero-body">
+<div class="eyebrow"><span class="line"></span> 春秋兵学 · 当代静读 <span class="hero-count">THIRTEEN CHAPTERS</span></div>
+<p class="latin">THE ART OF WAR · SUNZI</p>
+<h1 id="hero-heading">孙子<span>兵法</span><i>。</i></h1>
+<p class="hero-classic">兵者，国之大事。<br>死生之地，存亡之道，<br>不可不察也。</p>
+<p class="hero-sub">十三篇，四百三十一句。<br>以历史之镜观察判断、代价、协作与变化。</p>
+<div class="hero-cta"><a class="primary" href="#reader">开始静读 <span>↗</span></a><a href="#catalogue" class="secondary">阅十三篇 ↓</a></div>
+</div>
+<div class="hero-bottom"><span>史义 · 原典 · 释读</span><span>知彼知己 · 审势知止</span><span>SCROLL TO EXPLORE ↓</span></div>
+</section>
+<section id="principles" class="principles section wrap">
+<div class="label rise">I / THREE PERSPECTIVES</div>
+<h2 class="display rise">不以争胜，<br><em>先知其势。</em></h2>
+<p class="lead rise">读《孙子》，不仅看胜负，更需看目标、资源、代价与人。此处将古代文本作为审慎思考的历史材料，不提供现实危险行为指导。</p>
+<div class="idea-grid">
+<article class="idea rise"><span class="number">01 / 慎</span><div class="idea-mark">察</div><h3>未行先察</h3><p>关键抉择前辨明风险、代价与不可逆损失。</p><a href="#catalogue">研读《始计》 ↗</a></article>
+<article class="idea rise"><span class="number">02 / 全</span><div class="idea-mark">全</div><h3>保全为上</h3><p>不将无谓对抗当作成就；重视生命与整体保存。</p><a href="#catalogue">研读《谋攻》 ↗</a></article>
+<article class="idea rise"><span class="number">03 / 知</span><div class="idea-mark">知</div><h3>知而后动</h3><p>分清已知、未知与臆测，让判断建立在可信信息上。</p><a href="#catalogue">研读《用间》 ↗</a></article>
+</div>
+</section>
+<section class="pause"><div class="rise"><span class="label">AN INTERLUDE · 第十二篇</span><p>非利不动，<br><em>非得不用。</em></p><small>过度行动不等于深谋；懂得停下，也是一种判断。</small></div></section>
+<section class="catalogue section wrap" id="catalogue">
+<div class="label rise">II / THE THIRTEEN CHAPTERS</div>
+<h2 class="display rise">十三篇，<br><em>皆有可观。</em></h2>
+<p class="lead rise">以篇为经，以句为纬。选择篇章，先见原文，再点击查看白话史义。</p>
+<div class="search-row"><label class="search-box"><span>⌕</span><input id="search" type="search" autocomplete="off" placeholder="搜索「知彼知己」「慎战」「用间」…" aria-label="搜索篇名、原文和白话释读"><kbd>/</kbd></label></div>
+<div class="catalogue-meta"><span id="results-count" role="status" aria-live="polite">13 / 13 篇</span><span>点击篇章，进入阅读</span></div>
+<div class="chapter-grid" id="chapter-grid"></div><p class="empty" id="no-results" hidden>未找到匹配内容，试试其他关键词。</p>
+</section>
+<section class="reader section" id="reader">
+<div class="wrap">
+<div class="label">III / THE READING ROOM</div>
+<h2 class="display reader-title">读一言，<em>思一义。</em></h2>
+<p class="lead">一条古文在上，一条白话释读在下。译文初始隐藏，轻触后才可见；内容属于历史语境中的现代解释。</p>
+<div class="reader-layout">
+<aside class="sidebar"><div class="sidebar-heading">十三篇目录 <span id="nav-progress">01 / 13</span></div><div id="chapter-nav" class="chapter-nav"></div><p class="sidebar-note">以史为镜，不以古代兵事替代今日的伦理、法律与专业判断。</p></aside>
+<div class="reader-main">
+<div class="toolbar"><div class="toolbar-left"><span>原典在上 · 点击见义</span><span id="reveal-progress" class="reveal-progress" role="status" aria-live="polite">已释读 0 句</span></div><div class="toolbar-right"><button type="button" id="collapse-all">全部收起</button><button type="button" id="font-minus" aria-label="减小字号">A−</button><button type="button" id="font-plus" aria-label="放大字号">A＋</button></div></div>
+<div class="chapter-opening"><span id="chapter-type" class="label">第一篇</span><h3 id="chapter-name">始计篇</h3><p id="chapter-summary"></p><span id="chapter-watermark" aria-hidden="true">01</span></div>
+<div class="sentences-key"><span>CLASSICAL ORIGINAL → HISTORICAL INTERPRETATION</span><span>译意默认遮挡</span></div>
+<div id="sentences" class="sentences" role="list" aria-label="逐句原文与隐藏释读"></div>
+<div class="reader-bottom"><div><span id="sentence-total"></span><span id="chapter-theme"></span></div><div><button id="bookmark" type="button" aria-pressed="false">☆ 收藏本篇</button><button id="copy-link" type="button">↗ 复制链接</button></div></div>
+<div class="pager"><button id="prev" type="button"><span>← 上一篇</span><strong id="prev-title"></strong></button><button id="next" type="button"><span>下一篇 →</span><strong id="next-title"></strong></button></div>
+<p class="source-note">版本说明：本项目依据可公开查阅的《孙子兵法》通行阅读文本整理，采用简体与现代标点；其中古今异文、分句及现代史义解释尚未完成权威校勘。某些篇章涉及古代战争、火攻和情报制度，仅供历史文学研究。<a href="https://github.com/1998x-stack/theArtOfWar/blob/main/docs/TEXTUAL-SOURCES.md" target="_blank" rel="noopener noreferrer">查看文本来源与局限 ↗</a></p>
+</div>
+</div></div>
+</section>
+</main>
+<footer class="footer"><div class="footer-top"><div class="footer-logo">兵</div><div><strong>以史为镜，<br>以慎为始。</strong><p>孙子兵法 · 十三篇数字阅读馆</p></div></div><div class="footer-bottom"><span>THE ART OF WAR · 2026 · OPEN READING</span><div><a href="https://github.com/1998x-stack/theArtOfWar">项目仓库 ↗</a><a href="https://github.com/1998x-stack/theArtOfWar/tree/main/docs">文档 ↗</a><a href="#top">返回顶部 ↑</a></div></div></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script type="module" src="./app.js"></script>
+</body></html>
