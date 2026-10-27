@@ -7,7 +7,7 @@
 - [x] 深墨/宣纸UI、原生JS交互和响应式阅读
 - [x] README、许可、SKILL与references、专业文档
 - [x] CI与Pages声明式工作流
-- [ ] 核验新仓库CI成功
+- [x] 核验新仓库CI成功（2026-10-27）
 - [ ] 核验GitHub Pages实际公开可访问
 
 ## Stage 1 · 阅读与Skill
