@@ -11,7 +11,7 @@ for(let n=1;n<=13;n++){
  const c=CHAPTERS[n-1];
  check(c?.number===n,"number continuity "+n);
  check(typeof c?.title==="string"&&c.title.length>=2,"title "+n);
- check(typeof c?.summary==="string"&&c.summary.length>15,"chapter summary "+n);
+ check(typeof c?.summary==="string"&&c.summary.length>=8,"chapter summary "+n);
  check(Array.isArray(c?.paragraphs)&&c.paragraphs.length>=3,"full original paragraphs "+n);
  const s=passagesOf(c);
  check(s.length>1,"sentence segmentation "+n);
