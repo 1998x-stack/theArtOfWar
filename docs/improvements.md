@@ -10,5 +10,5 @@
 - Security & regression review: No secrets, permissions, workflows, deployment, content corpus or license touched; navigation may add browser history entries, intentionally. Browser E2E and full suite remain necessary before merge.
 - Risk & rollback: Back/forward navigation needs browser-level confirmation; revert the Draft PR or its commits to restore replaceState behavior.
 - Follow-up: Run npm test, npm run build and browser Back/Forward E2E at a locally served site, including chapter 1→2→3→Back→Forward and direct chapter links.
-- Commit: pending
-- PR: pending
+- Commit: 3bace7d5e36eb485f0a0b7b33f6bee8d5677f9e5 (initial history commit; later metadata update may advance head)
+- PR: https://github.com/1998x-stack/theArtOfWar/pull/1 (Draft)
