@@ -1,12 +1,13 @@
 import {CHAPTERS,byNumber} from "./data/chapters.js";
 import {byChapter,PASSAGE_COUNT} from "./data/passages.js";
+import {chapterFromHash,recordChapterNavigation} from "./chapter-history.js";
 
 const $=id=>document.getElementById(id);
 const store={
  get(k,f){try{return JSON.parse(localStorage.getItem("sunzi:"+k))??f}catch{return f}},
  set(k,v){try{localStorage.setItem("sunzi:"+k,JSON.stringify(v))}catch{/* Optional browser persistence */}}
 };
-const hashNumber=()=>Number(location.hash.match(/^#chapter-(\d+)$/)?.[1]);
+const hashNumber=()=>chapterFromHash(location.hash);
 const savedChapter=store.get("last",1);
 const valid=n=>Number.isInteger(n)&&n>=1&&n<=13;
 const state={
@@ -110,7 +111,7 @@ function renderChapter(){
 function navigate(n,scroll){
  if(!valid(n))return;
  state.current=n;renderChapter();
- history.replaceState(null,"","#chapter-"+n);
+ recordChapterNavigation(history,n,location.hash);
  if(scroll)$("reader").scrollIntoView({behavior:reduced()?"instant":"smooth",block:"start"});
 }
 $("search").addEventListener("input",e=>{state.query=e.target.value;renderCards()});

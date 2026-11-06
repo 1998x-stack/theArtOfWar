@@ -1,0 +1,14 @@
+### 2026-11-05 10:22 UTC — ChatGPT Portfolio Iteration
+- Run ID: 20261105T1020Z-history-nav-8
+- Repo / Base SHA: 1998x-stack/theArtOfWar / 810dc4bfdef574e6e3e2ba199acd3f7d9984f7ac
+- Historical context: docs/improvements.md returned GitHub 404 on main; first initialization. Search found no PRs; latest ten commits reviewed, last dated 2026-10-27. No matching open PR found.
+- Product problem & expected user value: Readers moving between chapters cannot use browser Back to return to a previous chapter because navigation replaces rather than pushes history; expected improvement is predictable back/forward navigation.
+- Engineering diagnosis & evidence: app.js navigate() called history.replaceState, overwriting the current chapter entry; hashchange already handles browser traversal. Alternative issues considered: search result context (lower evidence), persistence validation (lower impact). Selected navigation correctness.
+- Options & decision: Browser history fix (user value 4, correctness 4, evidence 5, verifiability 4, cost 1, risk 2 => 14); search snippets (3+1+3+2-3-2=4); bookmark sanitization (2+2+3+3-2-2=6). Scope restricted to URL navigation.
+- Changes: chapter-history.js adds validated hash parser and history recording helper; app.js uses pushState for chapter changes; tests/chapter-history.test.mjs covers valid/invalid hash and duplicate navigation; package.json runs tests. Existing content and hidden-interpretation behavior unchanged.
+- Validation: A: Node.js v22.16.0 locally executed two matching helper regression tests, 2 passed; C: node --check chapter-history.js passed. D: full npm test, npm run build and browser E2E not executed against repository because runtime cannot resolve github.com for cloning; GitHub connector fetched changed source and confirmed bindings, not a behavioral test. No CI claim.
+- Security & regression review: No secrets, permissions, workflows, deployment, content corpus or license touched; navigation may add browser history entries, intentionally. Browser E2E and full suite remain necessary before merge.
+- Risk & rollback: Back/forward navigation needs browser-level confirmation; revert the Draft PR or its commits to restore replaceState behavior.
+- Follow-up: Run npm test, npm run build and browser Back/Forward E2E at a locally served site, including chapter 1→2→3→Back→Forward and direct chapter links.
+- Commit: 3bace7d5e36eb485f0a0b7b33f6bee8d5677f9e5 (initial history commit; later metadata update may advance head)
+- PR: https://github.com/1998x-stack/theArtOfWar/pull/1 (Draft)
